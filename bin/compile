@@ -6,13 +6,13 @@ BIN_PATH="$1/bin"
 TMP_PATH="$1/tmp"
 mkdir -p $BIN_PATH $TMP_PATH
 
-WKHTMLTOPDF_URL="/vendor/wkhtmltopdf_binary/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb"
+#WKHTMLTOPDF_URL="/vendor/wkhtmltopdf_binary/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb"
 WKHTMLTOPDF_PKG="$TMP_PATH/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 
 echo "-----> Downloading wkhtmltopdf Debian package"
-curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
+cp /vendor/wkhtmltopdf_binary/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb $WKHTMLTOPDF_PKG
 
 echo "-----> Unpacking Debian package"
 dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
