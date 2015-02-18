@@ -11,8 +11,8 @@ WKHTMLTOPDF_PKG="$TMP_PATH/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 
-echo "-----> Downloading wkhtmltopdf Debian package"
-echo $1
+echo "-----> Copying wkhtmltopdf Debian package"
+
 cp $1/vendor/wkhtmltopdf_binary/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb $WKHTMLTOPDF_PKG
 
 echo "-----> Unpacking Debian package"
